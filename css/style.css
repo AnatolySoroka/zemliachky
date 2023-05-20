@@ -10,7 +10,7 @@ body {
 }
 
 body {
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
   overflow-x: hidden;
   font-family: "Montserrat";
   font-style: normal;
@@ -108,14 +108,12 @@ button {
 .hero {
   padding-top: 128px;
   background-color: var(--silver);
-  /* height: 100vh; */
-  padding-bottom: 271px;
+  padding-bottom: 100px;
 }
 
 .hero__offer {
   padding-top: 67px;
   max-width: 793px;
-  flex-grow: 4;
 }
 
 .hero__inner {
@@ -141,6 +139,7 @@ button {
 
 .hero__offer-btn {
   position: relative;
+  display: inline-block;
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
@@ -181,6 +180,78 @@ button {
 
 .hero-img {
   position: absolute;
-  top: 0;
+  top: -18px;
   right: -110px;
+}
+
+/* BOOTS SECTION */
+
+.application {
+  padding: 170px 0;
+  background-color: var(--silver);
+}
+
+.application__inner {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../images/boots-img.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 100px 0;
+}
+
+.application__title {
+  max-width: 789px;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 61px;
+  color: var(--white);
+}
+
+.application__text {
+  color: var(--white);
+  margin: 70px 0;
+  max-width: 664px;
+}
+
+.application__btn {
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 22px 36px;
+  z-index: 2;
+}
+
+.application__btn span {
+  margin-left: 20px;
+}
+
+.application__btn::before {
+  position: absolute;
+  content: "";
+  width: 68px;
+  height: 68px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  background-color: var(--silver);
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+}
+
+.application__btn:hover::before {
+  width: 100%;
 }
