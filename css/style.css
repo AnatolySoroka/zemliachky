@@ -68,6 +68,7 @@ button {
   background: #ffffff;
   box-shadow: 0px 0px 12px 5px rgba(136, 136, 136, 0.25);
   border-radius: 0px 0px 40px 40px;
+  z-index: 10;
 }
 
 .header__inner {
@@ -792,6 +793,12 @@ button {
   color: #fffbfa;
 }
 
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .footer a {
   color: #fffbfa;
 }
@@ -817,7 +824,6 @@ button {
   color: rgba(0, 0, 0, 0.8);
   padding: 22px 36px;
   z-index: 2;
-  /* margin-top: 60px; */
 }
 
 .footer__help-btn span {
@@ -848,4 +854,256 @@ button {
 
 .footer__help-btn:hover::before {
   width: 100%;
+}
+
+.footer__logo {
+  margin-bottom: 83px;
+  display: inline-block;
+}
+
+.footer__privacy-policy {
+  margin: 20px 0;
+  display: inline-block;
+}
+
+.footer__social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+/* MARIUPOL PAGE */
+/* PROJECT SECTION */
+
+.project {
+  padding-top: 128px;
+  padding-bottom: 121px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../images/mariupol-bg.jpg") center center;
+}
+
+.project__ellips {
+  position: absolute;
+  width: 880px;
+  height: 880px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: var(--black);
+  top: 128px;
+  left: 0;
+  filter: blur(325px);
+  z-index: 1;
+}
+
+.project__offer {
+  position: relative;
+  margin-top: 192px;
+  margin-bottom: 171px;
+  color: var(--white);
+  max-width: 800px;
+  z-index: 2;
+}
+
+.project__title {
+  font-weight: 600;
+  font-size: 70px;
+  line-height: 85px;
+}
+
+.project__text {
+  margin: 70px 0;
+  max-width: 445px;
+}
+
+.project__btn {
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 22px 36px;
+  z-index: 2;
+}
+
+.project__btn span {
+  margin-left: 20px;
+}
+
+.project__btn::before {
+  position: absolute;
+  content: "";
+  width: 68px;
+  height: 68px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  background: var(--white);
+  box-shadow: 0px -2px 12px rgba(136, 136, 136, 0.13);
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+}
+
+.project__btn:hover::before {
+  width: 100%;
+}
+
+.project__status {
+  position: relative;
+  color: var(--white);
+  z-index: 10;
+}
+
+.project__status-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.project__number {
+  display: flex;
+  align-items: end;
+}
+
+.project__number p span {
+  margin: 0 20px;
+  color: #e7e7e7;
+  font-weight: 600;
+}
+
+.project__number b {
+  margin-left: 20px;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 49px;
+}
+
+.project__status-bar {
+  width: 100%;
+  height: 6px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  background-color: #bcbaba;
+  margin: 19px 0;
+}
+
+.project__current-status-bar {
+  position: relative;
+  height: 12px;
+  background-color: var(--white);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  width: 35%;
+  transform: translateY(-3px);
+  -webkit-transform: translateY(-3px);
+  -moz-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  -o-transform: translateY(-3px);
+}
+
+.project__current-status-bar::after {
+  position: absolute;
+  content: "";
+  width: 44px;
+  height: 44px;
+  top: -38px;
+  right: 0;
+  background-color: #a6a6a6;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  -o-transform: translateY(50%);
+}
+
+/* ABOUT-PROJECT SECTION */
+
+.about-project {
+  background-color: var(--silver);
+  padding: 170px 0;
+  z-index: 10;
+}
+
+.about-project__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-project__content {
+  max-width: 620px;
+}
+
+.about-project__title {
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 61px;
+  margin-bottom: 70px;
+}
+
+.about-project__img img {
+  box-shadow: 0px 0px 12px 5px rgba(136, 136, 136, 0.25);
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+/* GOAL SECTION */
+
+.goal {
+  padding: 100px 0;
+  background-color: var(--white);
+  box-shadow: 0px 0px 12px 5px rgba(136, 136, 136, 0.25);
+}
+
+.goal__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.goal__slider {
+  max-width: 50%;
+}
+
+.goal__title {
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 61px;
+  margin-bottom: 70px;
+}
+
+.goal__content {
+  max-width: 620px;
+}
+
+.goal__content b {
+  margin: 30px 0;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
 }

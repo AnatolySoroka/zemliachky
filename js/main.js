@@ -28,3 +28,13 @@ $(document).ready(function () {
         // autoplay: true,
     });
 });
+
+
+$(document).ready(function () {
+    $(".goal__slider").slick({
+        arrow: true,
+        slidesToShow: 1,
+        // centerPadding: '0px',
+        // autoplay: true,
+    });
+});
