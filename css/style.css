@@ -1042,6 +1042,7 @@ button {
 /* ABOUT-PROJECT SECTION */
 
 .about-project {
+  position: relative;
   background-color: var(--silver);
   padding: 170px 0;
   z-index: 10;
@@ -1106,4 +1107,108 @@ button {
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
+}
+
+/* RENNOVATION SECTION */
+
+.rennovation {
+  padding: 170px 0;
+  background-color: var(--silver);
+}
+
+.rennovation__title {
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 61px;
+  margin-bottom: 70px;
+}
+
+.rennovation__plan-circles {
+  display: flex;
+  justify-content: space-between;
+  margin: 70px 0;
+}
+
+.rennovation__plan-circles div {
+  width: 243px;
+  height: 243px;
+  box-shadow: 0px 0px 12px 5px rgba(136, 136, 136, 0.25);
+  background-color: var(--white);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.rennovation__plan-1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rennovation__plan-2 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.rennovation__plan-item {
+  max-width: 340px;
+  display: flex;
+}
+
+.rennovation__plan-item .number {
+  font-weight: 600;
+  font-size: 90px;
+  line-height: 110px;
+  color: #a6a6a6;
+  margin-right: 30px;
+}
+
+.rennovation__plan-item .title h3 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 49px;
+  margin-bottom: 10px;
+}
+
+/* .rennovation__plan-item.item-1 {
+  display: flex;
+} */
+
+/* VIDEO SECTION */
+
+.video {
+  background-color: var(--silver);
+  padding-bottom: 170px;
+}
+
+.video__inner {
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  background-color: #5f5f5f;
+  min-height: 614px;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: var(--white);
+}
+
+.video__title {
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 61px;
+  margin-bottom: 20px;
+}
+
+.play__btn {
+  display: inline-block;
+}
+
+.video__title-wrapper img {
+  margin: 0 auto;
+  margin-top: 52px;
 }
