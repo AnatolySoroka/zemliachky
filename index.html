@@ -20,13 +20,13 @@
         <header class="header">
             <div class="container">
                 <div class="header__inner">
-                    <a class="header__logo" href="#">
+                    <a class="header__logo" href="/">
                         <img src="images/logo.svg" alt="Logo">
                     </a>
                     <nav class="menu">
                         <ul class="menu__list">
                             <li class="menu__list-item">
-                                <a class="menu__list-link" href="#">Проєкт “Маріуполь”</a>
+                                <a class="menu__list-link" href="/templates/mariupol.html">Проєкт “Маріуполь”</a>
                             </li>
                             <li class="menu__list-item">
                                 <a class="menu__list-link" href="#">Героїні</a>
@@ -104,12 +104,14 @@
                             </li>
                         </ul>
                     </div>
-                    <button class="select-language">
-                        Укр
+                    <div class="language">
+                        <button class="select-language">
+                            Укр
+                        </button>
                         <ul class="select-language__list">
                             <li class="select-language__list-item">Eng</li>
                         </ul>
-                    </button>
+                    </div>
                 </div>
             </div>
         </header>
@@ -123,7 +125,7 @@
                                 нашу землю у війні з російськими фашистами. На
                                 фронті та в тилу.
                             </p>
-                            <a class="hero__offer-btn" href="#">Як допомогти
+                            <a class="hero__offer-btn" href="/templates/payment.html">Як допомогти
                                 <span>
                                     <svg width="34" height="14" viewBox="0 0 34 14" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -134,7 +136,12 @@
                                 </span>
                             </a>
                         </div>
-                        <img class="hero-img" src="images/hero-img.png" alt="">
+                        <div class="hero-img__wrapper">
+                            <img class="hero-img" src="images/hero-img.png" alt="">
+                            <div class="hero-img__ellipse">
+                                <p>Відбудувати<br> Маріуполь!</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -361,7 +368,7 @@
                     <div class="support-women__inner">
                         <h2 class="support-women__title">Підтримай українок!</h2>
                         <div class="support-women__btn-wrapper">
-                            <a class="support-women__btn" href="#">Як допомогти
+                            <a class="support-women__btn" href="/templates/payment.html">Як допомогти
                                 <span>
                                     <svg width="34" height="14" viewBox="0 0 34 14" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -395,13 +402,14 @@
                                     <a class="footer__nav-list-link" href="#">Проєкт “Землячки”</a>
                                 </li>
                                 <li class="footer__nav-list-item">
-                                    <a class="footer__nav-list-link" href="#">Проєкт “Маріуполь”</a>
+                                    <a class="footer__nav-list-link" href="/templates/mariupol.html">Проєкт
+                                        “Маріуполь”</a>
                                 </li>
                                 <li class="footer__nav-list-item">
                                     <a class="footer__nav-list-link" href="#">Героїні</a>
                                 </li>
                                 <li class="footer__nav-list-item">
-                                    <a class="footer__nav-list-link" href="#">Психолог</a>
+                                    <a class="footer__nav-list-link" href="#">ЗМІ про нас</a>
                                 </li>
                             </ul>
                         </nav>
@@ -431,7 +439,7 @@
                         </ul>
                     </div>
                     <div class="footer__social">
-                        <a class="footer__help-btn" href="#">Як допомогти
+                        <a class="footer__help-btn" href="/templates/payment.html">Як допомогти
                             <span>
                                 <svg width="34" height="14" viewBox="0 0 34 14" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
