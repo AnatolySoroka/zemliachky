@@ -226,15 +226,17 @@ button {
   display: grid;
   place-items: center;
   text-align: center;
-  width: 171px;
-  height: 171px;
+  font-weight: 600;
+  width: 141px;
+  height: 141px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   background-color: #fff;
-  border: 5px solid #ff1e1e;
+  color: var(--black);
+  border: 3px solid #ff1e1e;
   top: 365px;
   left: 695px;
   transition: all 0.6s ease;
@@ -249,8 +251,8 @@ button {
 }
 
 .hero-img__ellipse:hover {
-  width: 271px;
-  height: 271px;
+  width: 221px;
+  height: 221px;
 }
 
 /* APPLICATION SECTION */
@@ -294,6 +296,10 @@ button {
   color: rgba(0, 0, 0, 0.8);
   padding: 22px 36px;
   z-index: 2;
+}
+
+.application__btn:not(:first-child) {
+  margin-left: 20px;
 }
 
 .application__btn span {
@@ -348,6 +354,48 @@ button {
 
 .about__text {
   margin: 70px 0;
+}
+
+.about__btn {
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 22px 36px;
+  z-index: 2;
+  margin-top: 60px;
+}
+
+.about__btn span {
+  margin-left: 20px;
+}
+
+.about__btn::before {
+  position: absolute;
+  content: "";
+  width: 68px;
+  height: 68px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  background: #ffffff;
+  box-shadow: 0px 0px 12px 5px rgba(136, 136, 136, 0.25);
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+}
+
+.about__btn:hover::before {
+  width: 100%;
 }
 
 .about__list b {
@@ -499,13 +547,9 @@ button {
   margin-bottom: 70px;
 }
 
-/* .ukrainian-heroes__slider .slick-list {
-  margin: 0 20px;
+.ukrainian-heroes__slider {
+  text-align: center;
 }
-
-.ukrainian-heroes__slider .slick-slide {
-  margin: 0 20px;
-} */
 
 .ukrainian-heroes__slider-link {
   display: inline-block;
@@ -687,14 +731,27 @@ button {
 }
 
 .partners__slider-item p {
+  opacity: 0;
+  visibility: hidden;
   text-align: center;
   margin-top: 30px;
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.partners__slider-item:hover p {
+  opacity: 1;
+  visibility: visible;
 }
 
 .partners__slider-item img {
+  width: 200px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -703,7 +760,7 @@ button {
 }
 
 .partners__slider .slick-slide {
-  margin: 0 70px;
+  margin: 0 60px;
 }
 
 /* INSTAGRAM SECTION */
@@ -832,21 +889,22 @@ button {
   content: "";
   width: 68px;
   height: 68px;
+  border: 3px solid red;
   border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
-  background: #ffffff;
-  box-shadow: 0px 0px 12px 5px rgba(136, 136, 136, 0.25);
-  left: 0;
-  top: 0;
-  z-index: -1;
   transition: all 0.6s ease;
   -webkit-transition: all 0.6s ease;
   -moz-transition: all 0.6s ease;
   -ms-transition: all 0.6s ease;
   -o-transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  -webkit-box-shadow: 0px 0px 12px 5px rgba(136, 136, 136, 0.25);
+  box-shadow: 0px 0px 12px 5px rgba(136, 136, 136, 0.25);
+  left: 0;
+  top: 0;
 }
 
 .support-women__btn:hover::before {

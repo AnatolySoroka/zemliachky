@@ -23,7 +23,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     $(".partners__slider").slick({
         arrow: true,
-        slidesToShow: 4,
+        slidesToShow: 6,
         // centerPadding: '0px',
         // autoplay: true,
     });
