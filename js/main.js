@@ -3,7 +3,7 @@ $(document).ready(function () {
         arrow: true,
         slidesToShow: 1,
         centerPadding: '0px',
-        autoplay: true,
+        // autoplay: true,
     });
 });
 
@@ -15,27 +15,45 @@ $(document).ready(function () {
         // centerPadding: '0px',
         // centerMode: true,
         // adaptiveHeight: true,
-        // autoplay: true,
+        autoplay: true,
         // variableWidth: true
     });
 });
 
 $(document).ready(function () {
-    $(".partners__slider").slick({
+    $(".psyhological-support__slider").slick({
         arrow: true,
-        slidesToShow: 6,
+        slidesToShow: 1,
+        autoplay: true,
         // centerPadding: '0px',
-        // autoplay: true,
     });
 });
 
+$(document).ready(function () {
+    $(".partners__slider").slick({
+        // arrow: true,
+        slidesToShow: 6,
+        // centerPadding: '0px',
+        autoplay: true,
+    });
+});
+
+
+$(document).ready(function () {
+    $(".about-project__slider").slick({
+        arrow: true,
+        slidesToShow: 1,
+        // centerPadding: '0px',
+        autoplay: true,
+    });
+});
 
 $(document).ready(function () {
     $(".goal__slider").slick({
         arrow: true,
         slidesToShow: 1,
         // centerPadding: '0px',
-        // autoplay: true,
+        autoplay: true,
     });
 });
 
@@ -45,19 +63,22 @@ $(document).ready(function () {
         arrow: true,
         slidesToShow: 4,
         // centerPadding: '0px',
-        // autoplay: true,
+        autoplay: true,
     });
 });
 
 
 // select language
-const language = document.querySelector('.language');
-language.addEventListener('mouseover', () => {
-    language.querySelector('.select-language__list').classList.add('active');
-});
-language.addEventListener('mouseout', () => {
-    language.querySelector('.select-language__list').classList.remove('active')
-});
+const language = document.querySelectorAll('.language');
+language.forEach(el => {
+    el.addEventListener('mouseover', () => {
+        el.querySelector('.select-language__list').classList.add('active');
+    });
+    el.addEventListener('mouseout', () => {
+        el.querySelector('.select-language__list').classList.remove('active')
+    });
+
+})
 
 
 // accordion
@@ -84,7 +105,7 @@ accordion.forEach(el => {
 });
 
 
-
+//////
 const list = document.querySelectorAll('.help__list-item');
 list.forEach(el => {
     el.addEventListener('click', () => {
@@ -92,3 +113,25 @@ list.forEach(el => {
         el.nextElementSibling.classList.toggle('active')
     })
 })
+
+
+
+// copy to clipboard
+const allText = document.querySelectorAll('.accordion__item .item__content p');
+if (allText.length > 0) {
+    allText.forEach(el => {
+        el.addEventListener('click', () => {
+            const copyText = el.querySelector('span').innerText;
+            copyToClipboard(copyText)
+        });
+    });
+}
+
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text);
+    const popup = document.querySelector('.my-popup');
+    popup.classList.add('show');
+    setTimeout(() => {
+        popup.classList.remove('show');
+    }, 2000);
+}
