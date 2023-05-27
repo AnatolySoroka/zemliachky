@@ -20,26 +20,30 @@
         <header class="header">
             <div class="container">
                 <div class="header__inner">
-                    <a class="header__logo" href="/">
-                        <img src="images/logo.svg" alt="Logo">
-                    </a>
+                    <div class="header__logo-wrapper">
+                        <a class="header__logo" href="/">
+                            <img src="images/logo.svg" alt="Logo">
+                        </a>
+                        <button class="burger__btn">
+                            <svg width="31" height="27" viewBox="0 0 30 27" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="31" height="3" rx="2" fill="black" />
+                                <rect y="10" width="31" height="3" rx="2" fill="black" />
+                                <rect y="20" width="31" height="3" rx="2" fill="black" />
+                            </svg>
+                        </button>
+                    </div>
                     <nav class="menu">
                         <ul class="menu__list">
                             <li class="menu__list-item">
-                                <span>
-                                    <a class="menu__list-link" href="/templates/mariupol.html">Проєкт
-                                        “Маріуполь”</a>
-                                </span>
+                                <a class="menu__list-link" href="/templates/mariupol.html">Проєкт
+                                    “Маріуполь”</a>
                             </li>
                             <li class="menu__list-item">
-                                <span>
-                                    <a class="menu__list-link" href="#">Героїні</a>
-                                </span>
+                                <a class="menu__list-link" href="#">Героїні</a>
                             </li>
                             <li class="menu__list-item">
-                                <span>
-                                    <a class="menu__list-link" href="#">ЗМІ про нас</a>
-                                </span>
+                                <a class="menu__list-link" href="#">ЗМІ про нас</a>
                             </li>
                         </ul>
                     </nav>
@@ -144,8 +148,10 @@
                             </a>
                         </div>
                         <div class="hero-img__wrapper">
-                            <img class="hero-img" src="images/hero-img.png" alt="">
-                            <a class="hero-img__ellipse" href="#">Маріуполь</a>
+                            <div class="hero-img__inner">
+                                <img class="hero-img" src="images/hero-img.png" alt="">
+                                <a class="hero-img__ellipse" href="#">Маріуполь</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -234,6 +240,34 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="about__slider-item">
+                                <div class="slider-item-img">
+                                    <img src="images/about-slider-img1.png" alt="">
+                                </div>
+                                <div class="slider__item-info">
+                                    <div class="info__name">
+                                        <b>Ксенія Драганюк</b>
+                                        <p>Авторка проєкту</p>
+                                    </div>
+                                    <div class="info__social">
+                                        <a href="#">kseniya_draganuk</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about__slider-item">
+                                <div class="slider-item-img">
+                                    <img src="images/about-slider-img1.png" alt="">
+                                </div>
+                                <div class="slider__item-info">
+                                    <div class="info__name">
+                                        <b>Ксенія Драганюк</b>
+                                        <p>Авторка проєкту</p>
+                                    </div>
+                                    <div class="info__social">
+                                        <a href="#">kseniya_draganuk</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -247,31 +281,49 @@
                                 <a class="ukrainian-heroes__slider-link" href="#">
                                     <img src="images/ukrainian-heroes-slider-1.png" alt="">
                                 </a>
+                                <b>Аня Полтава</b>
+                                <p>Військова ЗСУ</p>
+                                <p>22 р., м. Полтава</p>
                             </div>
                             <div class="ukrainian-heroes__slider-item">
                                 <a class="ukrainian-heroes__slider-link" href="#">
                                     <img src="images/ukrainian-heroes-slider-2.png" alt="">
                                 </a>
+                                <b>Аня Полтава</b>
+                                <p>Військова ЗСУ</p>
+                                <p>22 р., м. Полтава</p>
                             </div>
                             <div class="ukrainian-heroes__slider-item">
                                 <a class="ukrainian-heroes__slider-link" href="#">
                                     <img src="images/ukrainian-heroes-slider-3.png" alt="">
                                 </a>
+                                <b>Аня Полтава</b>
+                                <p>Військова ЗСУ</p>
+                                <p>22 р., м. Полтава</p>
                             </div>
                             <div class="ukrainian-heroes__slider-item">
                                 <a class="ukrainian-heroes__slider-link" href="#">
                                     <img src="images/ukrainian-heroes-slider-1.png" alt="">
                                 </a>
+                                <b>Аня Полтава</b>
+                                <p>Військова ЗСУ</p>
+                                <p>22 р., м. Полтава</p>
                             </div>
                             <div class="ukrainian-heroes__slider-item">
                                 <a class="ukrainian-heroes__slider-link" href="#">
                                     <img src="images/ukrainian-heroes-slider-2.png" alt="">
                                 </a>
+                                <b>Аня Полтава</b>
+                                <p>Військова ЗСУ</p>
+                                <p>22 р., м. Полтава</p>
                             </div>
                             <div class="ukrainian-heroes__slider-item">
                                 <a class="ukrainian-heroes__slider-link" href="#">
                                     <img src="images/ukrainian-heroes-slider-3.png" alt="">
                                 </a>
+                                <b>Аня Полтава</b>
+                                <p>Військова ЗСУ</p>
+                                <p>22 р., м. Полтава</p>
                             </div>
                         </div>
                         <div class="ukrainian-heroes__btn-wrapper">
@@ -438,9 +490,11 @@
                         <a class="footer__logo" href="/index.html">
                             <img src="images/footer-logo.svg" alt="Logo">
                         </a>
-                        <p class="footer__copyright">© ГО "Землячки" 2022</p>
-                        <a class="footer__privacy-policy" href="#">Політика конфіденціальності</a>
-                        <p class="footer__copyright-author">Дизайн: Бережна Анна</p>
+                        <div class="footer__copyright-wrapper">
+                            <p class="footer__copyright">© ГО "Землячки" 2022</p>
+                            <a class="footer__privacy-policy" href="#">Політика конфіденціальності</a>
+                            <p class="footer__copyright-author">Дизайн: Бережна Анна</p>
+                        </div>
                     </div>
                     <div class="footer__nav">
                         <h6 class="footer__nav-title">Сторінки:</h6>

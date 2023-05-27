@@ -20,16 +20,24 @@
         <header class="header">
             <div class="container">
                 <div class="header__inner">
-                    <a class="header__logo" href="/">
-                        <img src="../images/logo.svg" alt="Logo">
-                    </a>
+                    <div class="header__logo-wrapper">
+                        <a class="header__logo" href="/">
+                            <img src="../images/logo.svg" alt="Logo">
+                        </a>
+                        <button class="burger__btn">
+                            <svg width="31" height="27" viewBox="0 0 30 27" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="31" height="3" rx="2" fill="black" />
+                                <rect y="10" width="31" height="3" rx="2" fill="black" />
+                                <rect y="20" width="31" height="3" rx="2" fill="black" />
+                            </svg>
+                        </button>
+                    </div>
                     <nav class="menu">
                         <ul class="menu__list">
                             <li class="menu__list-item">
-                                <a class="menu__list-link" href="#">Проєкт “Землячки”</a>
-                            </li>
-                            <li class="menu__list-item">
-                                <a class="menu__list-link" href="/templates/mariupol.html">Проєкт “Маріуполь”</a>
+                                <a class="menu__list-link" href="/templates/mariupol.html">Проєкт
+                                    “Маріуполь”</a>
                             </li>
                             <li class="menu__list-item">
                                 <a class="menu__list-link" href="#">Героїні</a>
@@ -462,9 +470,11 @@
                         <a class="footer__logo" href="/index.html">
                             <img src="../images/footer-logo.svg" alt="Logo">
                         </a>
-                        <p class="footer__copyright">© ГО "Землячки" 2022</p>
-                        <a class="footer__privacy-policy" href="#">Політика конфіденціальності</a>
-                        <p class="footer__copyright-author">Дизайн: Бережна Анна</p>
+                        <div class="footer__copyright-wrapper">
+                            <p class="footer__copyright">© ГО "Землячки" 2022</p>
+                            <a class="footer__privacy-policy" href="#">Політика конфіденціальності</a>
+                            <p class="footer__copyright-author">Дизайн: Бережна Анна</p>
+                        </div>
                     </div>
                     <div class="footer__nav">
                         <h6 class="footer__nav-title">Сторінки:</h6>
@@ -474,7 +484,8 @@
                                     <a class="footer__nav-list-link" href="#">Проєкт “Землячки”</a>
                                 </li>
                                 <li class="footer__nav-list-item">
-                                    <a class="footer__nav-list-link" href="#">Проєкт “Маріуполь”</a>
+                                    <a class="footer__nav-list-link" href="/templates/mariupol.html">Проєкт
+                                        “Маріуполь”</a>
                                 </li>
                                 <li class="footer__nav-list-item">
                                     <a class="footer__nav-list-link" href="#">Героїні</a>

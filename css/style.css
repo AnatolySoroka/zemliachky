@@ -48,6 +48,46 @@ body {
   color: rgba(0, 0, 0, 0.8);
 }
 
+.burger__btn {
+  position: relative;
+  display: none;
+  border: none;
+  cursor: pointer;
+  width: 28px;
+  height: 22px;
+}
+
+.burger__btn svg rect {
+  position: absolute;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+}
+
+.burger__btn.active svg rect:first-child {
+  transform: rotate(45deg) translate(3px, -3px);
+  -webkit-transform: rotate(45deg) translate(3px, -3px);
+  -moz-transform: rotate(45deg) translate(3px, -3px);
+  -ms-transform: rotate(45deg) translate(3px, -3px);
+  -o-transform: rotate(45deg) translate(3px, -3px);
+}
+
+.burger__btn.active svg rect:nth-child(2) {
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.burger__btn.active svg rect:last-child {
+  transform: rotate(-45deg) translate(-14px, -3px);
+  -webkit-transform: rotate(-45deg) translate(-14px, -3px);
+  -moz-transform: rotate(-45deg) translate(-14px, -3px);
+  -ms-transform: rotate(-45deg) translate(-14px, -3px);
+  -o-transform: rotate(-45deg) translate(-14px, -3px);
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -479,7 +519,7 @@ button {
   box-shadow: 0px 0px 12px 5px rgba(136, 136, 136, 0.25);
   border-radius: 30px;
   width: 783px;
-  height: 614px;
+  height: 584px;
   margin: 0 20px;
 }
 
@@ -490,25 +530,19 @@ button {
 .slider-item-img {
   position: absolute;
   top: 0;
-  bottom: 0;
+  /* bottom: 0; */
   left: 0;
   right: 0;
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
-  border-radius: 30px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .slider-item-img img {
   width: 100%;
-  border-radius: 30px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .about__slider .slick-arrow {
@@ -600,6 +634,15 @@ button {
 
 .ukrainian-heroes__slider {
   text-align: center;
+}
+
+.ukrainian-heroes__slider-item b,
+.ukrainian-heroes__slider-item p {
+  display: none;
+}
+
+.ukrainian-heroes__slider-item b {
+  margin: 30px 0 10px;
 }
 
 .ukrainian-heroes__slider-link {
@@ -1078,6 +1121,7 @@ button {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 45px;
 }
 
 .footer a {
@@ -2110,4 +2154,277 @@ button {
   line-height: 49px;
   color: var(--black);
   text-align: center;
+}
+
+/* ADAPTIVE */
+
+@media (max-width: 1190px) {
+  .header {
+    transition: all 0.3s ease;
+    max-height: 170px;
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+  }
+  .header__inner {
+    flex-direction: column;
+    padding: 50px 35px;
+  }
+  .header__logo-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 45px;
+  }
+  .burger__btn {
+    display: block;
+  }
+  .menu {
+    width: 100%;
+  }
+  .social-icons {
+    width: 100%;
+    margin: 20px 0;
+  }
+  .social-icons__list {
+    margin-right: 0;
+    justify-content: end;
+  }
+  ul.menu__list {
+    flex-direction: column;
+    align-items: end;
+    gap: 20px;
+  }
+  .language {
+    margin-left: auto;
+  }
+  .hero,
+  .project,
+  .accordion {
+    padding-top: 168px;
+  }
+  .hero {
+    padding-bottom: 130px;
+  }
+  .hero__inner {
+    margin-top: 70px;
+  }
+  .hero__offer {
+    padding-top: 0px;
+  }
+  /* .hero__offer-title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 49px;
+  } */
+  .hero-img__wrapper {
+    position: static;
+    margin-top: 45px;
+    text-align: center;
+  }
+  .hero-img__inner {
+    position: relative;
+    display: inline-block;
+  }
+  .hero-img__wrapper img {
+    position: relative;
+    margin: 0 auto;
+  }
+  .application {
+    padding: 0 0 130px;
+  }
+  .application__inner {
+    padding: 70px 0;
+  }
+  .application__title {
+    font-size: 34px;
+    line-height: 41px;
+    margin-bottom: 45px;
+  }
+  .application__text {
+    display: none;
+  }
+  .about {
+    padding: 70px 0;
+  }
+  .about__inner {
+    display: block;
+  }
+  .about__title {
+    font-size: 34px;
+    line-height: 41px;
+  }
+  .about__text {
+    margin: 45px 0;
+  }
+  .about__list-item {
+    margin-top: 20px;
+  }
+  .about__btn {
+    margin-top: 50px;
+    margin-bottom: 45px;
+  }
+  .about__slider {
+    width: 100%;
+  }
+  /* .about__slider {
+    text-align: start;
+  } */
+
+  .ukrainian-heroes__slider {
+    text-align: start;
+  }
+
+  .about__slider-item {
+    overflow: hidden;
+    width: 495px;
+    height: 600px;
+  }
+  .ukrainian-heroes__slider-item b,
+  .ukrainian-heroes__slider-item p {
+    display: block;
+    /* text-align: start; */
+  }
+  .ukrainian-heroes__slider-link img {
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+  }
+  /* .psyhological-support {
+    padding-bottom: 70px;
+  } */
+  .psyhological-support__title {
+    display: none;
+  }
+  .psyhological-support {
+    display: none;
+  }
+  .partners__title {
+    font-size: 34px;
+    line-height: 41px;
+    margin-bottom: 45px;
+  }
+  .partners__inner {
+    padding: 70px 0;
+  }
+  .instagram {
+    padding-bottom: 0;
+  }
+  .instagram__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .instagram__info {
+    margin: 0px;
+  }
+  .instagram__info-title {
+    font-size: 34px;
+    line-height: 41px;
+    margin-bottom: 45px;
+  }
+  .instagram__info-btn {
+    margin-top: 45px;
+  }
+  .instagram__img {
+    /* display: inline-block; */
+    position: static;
+    width: 100%;
+    /* right: -230px; */
+  }
+  .instagram__img img {
+    margin: 0 auto;
+  }
+  .support-women__title {
+    font-size: 34px;
+    line-height: 41px;
+    margin-bottom: 45px;
+  }
+  .support-women__btn {
+    margin-top: 0px;
+  }
+  /* .project__title {
+    font-size: 40px;
+    line-height: 49px;
+  } */
+  .project__offer {
+    margin-top: 100px;
+    margin-bottom: 0px;
+  }
+  .about-project__inner {
+    flex-direction: column;
+    gap: 45px;
+  }
+  .about-project__title,
+  .goal__title {
+    font-size: 34px;
+    line-height: 41px;
+    margin-bottom: 45px;
+  }
+  .about-project__btn {
+    margin-top: 45px;
+  }
+  .about-project__slider {
+    width: 100%;
+  }
+  .goal {
+    padding: 70px 0;
+  }
+  .goal__inner {
+    flex-direction: column-reverse;
+    gap: 45px;
+  }
+  .goal__slider {
+    width: 100%;
+  }
+  .video__inner {
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    position: relative;
+  }
+  .footer__inner {
+    flex-direction: column;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* flex-wrap: wrap; */
+    /* gap: 45px; */
+  }
+  .footer__logo {
+    margin-bottom: 0px;
+  }
+  .footer__logo img {
+    width: 164px;
+  }
+  .footer__info {
+    order: -2;
+  }
+  .footer__social {
+    order: -1;
+  }
+  .footer__social-icons {
+    justify-content: start;
+  }
+  .footer__copyright-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 24px;
+    text-align: center;
+  }
+  .footer__bottom {
+    margin-top: 100px;
+  }
 }
