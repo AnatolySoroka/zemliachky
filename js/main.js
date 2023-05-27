@@ -1,14 +1,15 @@
 $(document).ready(function () {
     $(".about__slider").slick({
         arrows: true,
-        slidesToShow: 1,
-        centerPadding: '0px',
+        // slidesToShow: 1,
         // autoplay: true,
         responsive: [
             {
                 breakpoint: 1190,
                 settings: {
-                    slidesToShow: 2,
+                    variableWidth: true,
+                    centerPadding: '200px',
+                    // slidesToShow: 2,
                     arrows: false,
                 }
             },]
@@ -19,16 +20,13 @@ $(document).ready(function () {
 $(document).ready(function () {
     $(".ukrainian-heroes__slider").slick({
         arrow: true,
-        slidesToShow: 3,
+        variableWidth: true,
         // autoplay: true,
         responsive: [
             {
                 breakpoint: 1190,
                 settings: {
-                    slidesToShow: 1.1,
                     arrows: false,
-                    // centerPadding: '0px',
-                    centerMode: false,
                 }
             },]
     });
@@ -45,27 +43,22 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $(".partners__slider").slick({
-        // arrow: true,
-        slidesToShow: 6,
-        // centerPadding: '0px',
+        arrow: true,
         // autoplay: true,
+        infinite: false,
+        variableWidth: true,
         responsive: [
             {
                 breakpoint: 1190,
                 settings: {
-                    slidesToShow: 4,
                     arrows: false,
-                    // centerPadding: '0px',
-                    // centerMode: false,
                 }
             },
             {
                 breakpoint: 576,
                 settings: {
-                    slidesToShow: 2,
                     arrows: false,
-                    // centerPadding: '0px',
-                    // centerMode: false,
+                    // slidesToShow: 2,
                 }
             }]
     });
@@ -114,9 +107,19 @@ $(document).ready(function () {
 $(document).ready(function () {
     $(".reports__slider").slick({
         arrows: true,
-        slidesToShow: 4,
-        // centerPadding: '0px',
+        // slidesToShow: 4,
+        variableWidth: true,
         // autoplay: true,
+        responsive: [
+            {
+                breakpoint: 1190,
+                settings: {
+                    // slidesToShow: 3,
+                    arrows: false,
+                    // centerPadding: '0px',
+                    // centerMode: false,
+                }
+            },]
     });
 });
 
