@@ -75,6 +75,7 @@ $(document).ready(function () {
         arrows: true,
         slidesToShow: 1,
         lazyLoad: 'ondemand',
+        // variableWidth: true,
         // centerPadding: '0px',
         // autoplay: true,
         responsive: [
@@ -94,8 +95,8 @@ $(document).ready(function () {
     $(".goal__slider").slick({
         arrows: true,
         slidesToShow: 1,
+        // variableWidth: true,
         lazyLoad: 'ondemand',
-        // centerPadding: '0px',
         // autoplay: true,
         responsive: [
             {
@@ -105,6 +106,14 @@ $(document).ready(function () {
                     arrows: false,
                     // centerPadding: '0px',
                     // centerMode: false,
+                }
+            },
+            {
+                breakpoint: 426,
+                settings: {
+                    // slidesToShow: 1.2,
+                    arrows: false,
+                    variableWidth: true,
                 }
             },]
     });

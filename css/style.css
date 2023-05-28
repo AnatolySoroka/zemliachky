@@ -1556,7 +1556,7 @@ button {
 }
 
 .goal__slider-item img {
-  /* width: 100%; */
+  width: 100%;
   border-radius: 30px;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
@@ -1731,7 +1731,8 @@ button {
 
 .video {
   background-color: var(--silver);
-  padding-bottom: 130px;
+  /* padding-bottom: 130px; */
+  padding: 0 16px 130px;
 }
 
 .video__inner {
@@ -2398,13 +2399,6 @@ button {
   .goal__slider {
     width: 100%;
   }
-  .video__inner {
-    border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
-  }
   .accordion__title {
     margin: 20px 0;
     font-size: 34px;
@@ -2476,7 +2470,7 @@ button {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 577px) {
   .hero__offer-title {
     font-size: 50px;
     line-height: 61px;
@@ -2559,6 +2553,33 @@ button {
   .instagram {
     overflow-x: hidden;
   }
+  .project__ellips {
+    width: 438px;
+    height: 438px;
+    top: 170px;
+  }
+  .project__title {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .project__text {
+    margin: 45px 0;
+  }
+  .video__title {
+    font-size: 34px;
+    line-height: 42px;
+  }
+  .video {
+    padding: 0 0 130px;
+  }
+  .video__inner {
+    padding: 0 16px;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+  }
 }
 
 @media (max-width: 426px) {
@@ -2584,6 +2605,15 @@ button {
     -o-border-radius: 0px;
     background-color: var(--silver);
     box-shadow: none;
+  }
+  .about-project__img {
+    padding: 8px;
+  }
+  .goal__slider-item {
+    margin: 0 10px;
+  }
+  .goal__slider-item img {
+    width: 340px;
   }
 }
 @media (max-width: 376px) {
@@ -2627,7 +2657,9 @@ button {
   .about__btn,
   .instagram__info-btn,
   .support-women__btn,
-  .footer__help-btn {
+  .footer__help-btn,
+  .about-project__btn,
+  .goal__btn {
     font-size: 14px;
     line-height: 17px;
     padding: 13px 18px;
@@ -2638,7 +2670,9 @@ button {
   .about__btn::before,
   .instagram__info-btn::before,
   .support-women__btn::before,
-  .footer__help-btn::before {
+  .footer__help-btn::before,
+  .about-project__btn::before,
+  .goal__btn::before {
     width: 45px;
     height: 45px;
   }
@@ -2648,7 +2682,9 @@ button {
   .about__btn span,
   .instagram__info-btn span,
   .support-women__btn span,
-  .footer__help-btn span {
+  .footer__help-btn span,
+  .about-project__btn span,
+  .goal__btn span {
     margin-left: 10px;
   }
   .application__title {
@@ -2700,4 +2736,7 @@ button {
     background: rgba(0, 0, 0, 0.8);
     color: #fffbfa;
   }
+  /* .goal__slider-item {
+    width: 100%;
+  } */
 }
