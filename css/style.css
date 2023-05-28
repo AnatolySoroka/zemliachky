@@ -2692,10 +2692,12 @@ button {
   .footer__copyright-wrapper {
     left: 16px;
     /* right: 0; */
-    bottom: 125px;
+    bottom: 170px;
     text-align: start;
   }
   .footer {
-    padding: 80px 0 0px;
+    padding: 80px 0 40px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fffbfa;
   }
 }
