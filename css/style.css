@@ -2527,9 +2527,9 @@ button {
   .psyhological-support__title {
     display: none;
   }
-  .psyhological-support {
+  /* .psyhological-support {
     display: none;
-  }
+  } */
   .partners__title {
     font-size: 34px;
     line-height: 41px;

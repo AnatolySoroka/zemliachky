@@ -157,7 +157,7 @@ function trackScroll() {
 
 function goTop() {
     if (window.pageYOffset > 0) {
-        window.scrollBy(0, -35);
+        window.scrollBy(0, -65);
         setTimeout(goTop, 0)
     }
 }
