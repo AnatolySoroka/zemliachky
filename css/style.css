@@ -2556,6 +2556,9 @@ button {
     font-size: 14px;
     line-height: 17px;
   }
+  .instagram {
+    overflow-x: hidden;
+  }
 }
 
 @media (max-width: 426px) {
@@ -2568,6 +2571,19 @@ button {
   .hero-img__ellipse:hover {
     width: 110px;
     height: 110px;
+  }
+  .instagram__img img {
+    width: 130%;
+  }
+  .instagram__info {
+    padding: 0;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    background-color: var(--silver);
+    box-shadow: none;
   }
 }
 @media (max-width: 376px) {
@@ -2602,19 +2618,37 @@ button {
   .application__btn {
     margin-top: 10px;
   }
+  .instagram__info-btn {
+    margin-top: 21px;
+  }
   .hero__offer-btn,
-  .application__btn {
+  .application__btn,
+  .ukrainian-heroes__btn,
+  .about__btn,
+  .instagram__info-btn,
+  .support-women__btn,
+  .footer__help-btn {
     font-size: 14px;
     line-height: 17px;
     padding: 13px 18px;
   }
   .hero__offer-btn::before,
-  .application__btn::before {
+  .application__btn::before,
+  .ukrainian-heroes__btn::before,
+  .about__btn::before,
+  .instagram__info-btn::before,
+  .support-women__btn::before,
+  .footer__help-btn::before {
     width: 45px;
     height: 45px;
   }
   .hero__offer-btn span,
-  .application__btn span {
+  .application__btn span,
+  .ukrainian-heroes__btn span,
+  .about__btn span,
+  .instagram__info-btn span,
+  .support-women__btn span,
+  .footer__help-btn span {
     margin-left: 10px;
   }
   .application__title {
@@ -2625,5 +2659,43 @@ button {
   .about__title {
     font-size: 26px;
     line-height: 32px;
+  }
+  .ukrainian-heroes {
+    padding: 73px 0 130px;
+  }
+  .ukrainian-heroes__title,
+  .instagram__info-title {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 45px;
+  }
+  .partners {
+    padding-bottom: 40px;
+  }
+  .partners__title {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 54px;
+  }
+  .partners__slider-item {
+    margin: 0 15px;
+  }
+
+  .support-women__title {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 20px;
+  }
+  .footer__bottom {
+    margin-top: 250px;
+  }
+  .footer__copyright-wrapper {
+    left: 16px;
+    /* right: 0; */
+    bottom: 125px;
+    text-align: start;
+  }
+  .footer {
+    padding: 80px 0 0px;
   }
 }

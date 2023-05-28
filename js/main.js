@@ -1,8 +1,10 @@
 $(document).ready(function () {
     $(".about__slider").slick({
         arrows: true,
+        lazyLoad: 'ondemand',
+        // lazyLoad: 'progressive',
         // slidesToShow: 1,
-        // autoplay: true,
+        autoplay: true,
         responsive: [
             {
                 breakpoint: 1190,
@@ -21,6 +23,7 @@ $(document).ready(function () {
     $(".ukrainian-heroes__slider").slick({
         arrow: true,
         variableWidth: true,
+        lazyLoad: 'ondemand',
         // autoplay: true,
         responsive: [
             {
@@ -36,6 +39,7 @@ $(document).ready(function () {
     $(".psyhological-support__slider").slick({
         arrows: true,
         slidesToShow: 1,
+        lazyLoad: 'ondemand',
         // autoplay: true,
         // centerPadding: '0px',
     });
@@ -47,6 +51,7 @@ $(document).ready(function () {
         // autoplay: true,
         infinite: false,
         variableWidth: true,
+        lazyLoad: 'ondemand',
         responsive: [
             {
                 breakpoint: 1190,
@@ -69,6 +74,7 @@ $(document).ready(function () {
     $(".about-project__slider").slick({
         arrows: true,
         slidesToShow: 1,
+        lazyLoad: 'ondemand',
         // centerPadding: '0px',
         // autoplay: true,
         responsive: [
@@ -88,6 +94,7 @@ $(document).ready(function () {
     $(".goal__slider").slick({
         arrows: true,
         slidesToShow: 1,
+        lazyLoad: 'ondemand',
         // centerPadding: '0px',
         // autoplay: true,
         responsive: [
@@ -107,6 +114,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     $(".reports__slider").slick({
         arrows: true,
+        lazyLoad: 'ondemand',
         // slidesToShow: 4,
         variableWidth: true,
         // autoplay: true,
