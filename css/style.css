@@ -1829,11 +1829,16 @@ button {
   margin-top: 30px;
 }
 
+.item__title-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
 .accordion__item h3 {
   font-weight: 600;
   font-size: 32px;
   line-height: 40px;
-  flex-grow: 1;
   /* margin-bottom: 20px; */
 }
 
@@ -1841,6 +1846,7 @@ button {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+  /* flex-grow: 1; */
 }
 
 .payments-img {
@@ -1867,6 +1873,11 @@ button {
   right: 40px;
 }
 
+.accordion__item.active .item__title .payments-img img {
+  margin-left: auto;
+  margin-right: 0;
+}
+
 .accordion__item.active .item__title .img-cross {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
@@ -1876,8 +1887,6 @@ button {
 }
 
 .img-cross {
-  animation-name: translate;
-  animation-duration: 3s;
   display: grid;
   place-items: center;
   margin-left: 398px;
@@ -1897,45 +1906,49 @@ button {
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
 }
-/* 
-.item__content p:not(span) {
-  font-weight: 600;
-} */
 
 .item__content p {
   position: relative;
   margin-top: 20px;
   max-width: 80%;
   width: fit-content;
-  padding-right: 44px;
+  padding-right: 35px;
 }
 
-.item__content p:not(:first-child)::after {
+.item__content p::after {
   content: "";
   position: absolute;
-  width: 0px;
-  height: 0px;
-  background-image: url("../images/copy-icon.svg");
-  right: 0;
-  top: 0;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
+  background-image: url("../images/copy-icon.svg");
+  width: 0;
+  height: 0;
+  right: 0;
+  top: -4px;
 }
 
 .item__content p:hover::after {
   content: "";
   position: absolute;
-  width: 0px;
-  height: 0px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/copy-icon.svg");
+  right: 0;
+  top: -4px;
+}
+
+/* .item__content p:hover span::after {
+  content: "";
+  position: absolute;
   background-image: url("../images/copy-icon.svg");
   right: 0;
   top: 0;
   width: 24px;
   height: 24px;
-}
+} */
 
 .item__content p b {
   margin-right: 20px;
@@ -2407,26 +2420,21 @@ button {
   .accordion__items {
     padding: 45px 0 130px;
   }
-  .accordion__item {
+  /* .accordion__item {
     min-height: 100px;
-  }
+  } */
   .help {
     padding: 0 0 130px;
   }
-  .accordion__item h3 {
-    font-size: 20px;
-    line-height: 24px;
-  }
-  .accordion__item .item__title .payments-img {
+
+  /* .accordion__item .item__title .payments-img {
     position: absolute;
-    /* bottom: 25px; */
-    /* right: 40px; */
     bottom: 10px;
     left: 10px;
-  }
-  .img-cross {
+  } */
+  /* .img-cross {
     margin-left: 0;
-  }
+  } */
   .help {
     padding: 60px 0 130px;
   }
@@ -2467,6 +2475,46 @@ button {
   .reports-bottom__title {
     font-size: 34px;
     line-height: 41px;
+  }
+  .img-cross {
+    margin-left: 298px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .img-cross {
+    margin-left: 110px;
+  }
+}
+
+@media (max-width: 769px) {
+  .item__title-inner {
+    flex-direction: column;
+    align-items: start;
+  }
+  .item__title-inner .payments-img img {
+    margin-right: auto;
+    margin-left: 0;
+  }
+  .accordion__item h3 {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 3px;
+  }
+  .accordion__item.active {
+    padding: 20px 32px 90px;
+  }
+  .accordion__item.active .item__title .payments-img {
+    right: auto;
+    left: 32px;
+  }
+  .accordion__item.active .item__title .payments-img img {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .item__content p {
+    max-width: 100%;
+    width: fit-content;
   }
 }
 
@@ -2579,6 +2627,10 @@ button {
     -moz-border-radius: 0px;
     -ms-border-radius: 0px;
     -o-border-radius: 0px;
+  }
+  .number {
+    font-size: 30px;
+    line-height: 36px;
   }
 }
 
@@ -2735,6 +2787,9 @@ button {
     padding: 80px 0 40px;
     background: rgba(0, 0, 0, 0.8);
     color: #fffbfa;
+  }
+  .accordion {
+    padding-top: 73px;
   }
   /* .goal__slider-item {
     width: 100%;
