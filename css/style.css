@@ -9,6 +9,48 @@ body {
   height: 100%;
 }
 
+.scroll-top__btn {
+  position: fixed;
+  bottom: 40px;
+  left: 16px;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: var(--white);
+  display: grid;
+  place-items: center;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  box-shadow: 0px 0px 12px 5px rgba(136, 136, 136, 0.25);
+  z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.scroll-top__btn--show {
+  width: 68px;
+  height: 68px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.scroll-top__btn:hover {
+  opacity: 0.7;
+}
+
 .my-popup {
   position: fixed;
   bottom: 50px;
@@ -2006,6 +2048,7 @@ button {
   position: relative;
   font-weight: 600;
   padding-left: 36px;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .help__list-item::before {
@@ -2679,7 +2722,7 @@ button {
   }
   .header__inner {
     flex-direction: column;
-    padding: 18px 15px;
+    padding: 18px 15px 50px;
   }
   .header__logo-wrapper {
     margin-bottom: 25px;

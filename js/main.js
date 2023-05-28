@@ -140,6 +140,28 @@ $(document).ready(function () {
     });
 });
 
+const scrollToTopBtn = document.querySelector('.scroll-top__btn');
+
+scrollToTopBtn.addEventListener('click', goTop);
+window.addEventListener('scroll', trackScroll);
+
+function trackScroll() {
+    const offset = window.pageYOffset;
+    const coords = document.documentElement.clientHeight;
+    if (offset > coords) {
+        scrollToTopBtn.classList.add('scroll-top__btn--show');
+    } else {
+        scrollToTopBtn.classList.remove('scroll-top__btn--show')
+    }
+}
+
+function goTop() {
+    if (window.pageYOffset > 0) {
+        window.scrollBy(0, -35);
+        setTimeout(goTop, 0)
+    }
+}
+
 // burger btn
 
 const burgerBtn = document.querySelector('.burger__btn');
