@@ -1974,6 +1974,7 @@ button {
 /* HELP SECTION */
 
 .help {
+  position: relative;
   padding: 68px 0 130px;
   background-color: var(--silver);
   min-height: 1165px;
@@ -2059,8 +2060,8 @@ button {
 
 .help__address {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 16px;
+  top: 180px;
   padding: 80px 62px;
   border-radius: 40px;
   -webkit-border-radius: 40px;
@@ -2435,9 +2436,9 @@ button {
   /* .img-cross {
     margin-left: 0;
   } */
-  .help {
+  /* .help {
     padding: 60px 0 130px;
-  }
+  } */
   .help__title {
     font-size: 34px;
     line-height: 41px;
@@ -2452,14 +2453,17 @@ button {
   }
   .help__address {
     position: static;
-    /*margin-top: 45px;
-    */
+    margin-top: 45px;
+    width: 100%;
     padding: 70px 0;
     border-radius: 0px;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     -ms-border-radius: 0px;
     -o-border-radius: 0px;
+  }
+  .help__address img {
+    width: 100%;
   }
   .help__list-item:not(:first-child) {
     margin-top: 45px;
