@@ -2,8 +2,6 @@ $(document).ready(function () {
     $(".about__slider").slick({
         arrows: true,
         lazyLoad: 'ondemand',
-        // lazyLoad: 'progressive',
-        // slidesToShow: 1,
         autoplay: true,
         responsive: [
             {
@@ -11,7 +9,6 @@ $(document).ready(function () {
                 settings: {
                     variableWidth: true,
                     centerPadding: '200px',
-                    // slidesToShow: 2,
                     arrows: false,
                 }
             },]
@@ -23,8 +20,8 @@ $(document).ready(function () {
     $(".ukrainian-heroes__slider").slick({
         arrow: true,
         variableWidth: true,
-        lazyLoad: 'ondemand',
-        // autoplay: true,
+        lazyLoad: 'progressive',
+        autoplay: true,
         responsive: [
             {
                 breakpoint: 1190,
@@ -40,18 +37,17 @@ $(document).ready(function () {
         arrows: true,
         slidesToShow: 1,
         lazyLoad: 'ondemand',
-        // autoplay: true,
-        // centerPadding: '0px',
+        autoplay: true,
     });
 });
 
 $(document).ready(function () {
     $(".partners__slider").slick({
         arrow: true,
-        // autoplay: true,
+        autoplay: true,
         infinite: false,
         variableWidth: true,
-        lazyLoad: 'ondemand',
+        lazyLoad: 'progressive',
         responsive: [
             {
                 breakpoint: 1190,
@@ -63,7 +59,6 @@ $(document).ready(function () {
                 breakpoint: 576,
                 settings: {
                     arrows: false,
-                    // slidesToShow: 2,
                 }
             }]
     });
@@ -75,17 +70,13 @@ $(document).ready(function () {
         arrows: true,
         slidesToShow: 1,
         lazyLoad: 'ondemand',
-        // variableWidth: true,
-        // centerPadding: '0px',
-        // autoplay: true,
+        autoplay: true,
         responsive: [
             {
                 breakpoint: 1190,
                 settings: {
                     slidesToShow: 1,
                     arrows: false,
-                    // centerPadding: '0px',
-                    // centerMode: false,
                 }
             },]
     });
@@ -95,23 +86,19 @@ $(document).ready(function () {
     $(".goal__slider").slick({
         arrows: true,
         slidesToShow: 1,
-        // variableWidth: true,
         lazyLoad: 'ondemand',
-        // autoplay: true,
+        autoplay: true,
         responsive: [
             {
                 breakpoint: 1190,
                 settings: {
                     slidesToShow: 1,
                     arrows: false,
-                    // centerPadding: '0px',
-                    // centerMode: false,
                 }
             },
             {
                 breakpoint: 426,
                 settings: {
-                    // slidesToShow: 1.2,
                     arrows: false,
                     variableWidth: true,
                 }
@@ -123,23 +110,22 @@ $(document).ready(function () {
 $(document).ready(function () {
     $(".reports__slider").slick({
         arrows: true,
-        lazyLoad: 'ondemand',
-        // slidesToShow: 4,
+        lazyLoad: 'progressive',
         variableWidth: true,
-        // autoplay: true,
+        autoplay: true,
         responsive: [
             {
                 breakpoint: 1190,
                 settings: {
-                    // slidesToShow: 3,
                     arrows: false,
-                    // centerPadding: '0px',
-                    // centerMode: false,
                 }
             },]
     });
 });
 
+
+
+// scroll to top button
 const scrollToTopBtn = document.querySelector('.scroll-top__btn');
 
 scrollToTopBtn.addEventListener('click', goTop);
@@ -245,3 +231,66 @@ function copyToClipboard(text) {
         popup.classList.remove('show');
     }, 2000);
 }
+
+
+
+// video
+const videoItem = document.querySelector('.video__item');
+const videoItemBg = document.querySelector('.video__item-bg')
+
+window.addEventListener('DOMContentLoaded', () => {
+    const playBtn = document.querySelector('.video__item-play');
+
+    playBtn.addEventListener('click', () => {
+
+        if (videoItem.classList.contains('ready')) {
+            return;
+        }
+
+        videoItem.classList.add('ready');
+        const src = videoItem.dataset.src;
+
+        videoItem.insertAdjacentHTML('afterbegin', `<iframe src="${src}" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>`);
+        videoItemBg.classList.add('hide')
+    })
+})
+// const videoInit = (selector) => {
+//     const videos = document.querySelectorAll(selector)
+
+//     if (videos.length > 0) {
+//         videos.forEach(video => {
+//             videoGenerate(video)
+//         })
+//     }
+// }
+
+// const videoGenerate = (video) => {
+//     const btn = video.querySelector('.video-block__button')
+//     const videoID = btn.dataset.videoId
+//     const container = video.querySelector('.video-block__inner')
+
+//     btn.addEventListener('click', () => {
+//         const iframe = iframeGenerate(videoID)
+
+//         container.innerHTML = '';
+//         container.appendChild(iframe)
+//     })
+// }
+
+// const iframeGenerate = (videoID) => {
+//     const iframe = document.createElement('iframe')
+
+//     const src = `https://www.youtube.com/embed/${videoID}?rel=0&showinfo=0&autoplay=1`
+
+//     iframe.setAttribute('src', src)
+//     iframe.setAttribute('frameborder', '0')
+//     iframe.setAttribute('allow', 'autoplay')
+//     iframe.setAttribute('allowfullscreen', '')
+//     iframe.classList.add('video-block__content')
+
+//     return iframe
+// }
+
+// videoInit('.video-block')
