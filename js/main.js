@@ -256,3 +256,13 @@ window.addEventListener('DOMContentLoaded', () => {
         videoItemBg.classList.add('hide')
     })
 })
+
+
+//Перевіряю чи юзер використовує FireFox, якщо так, то добавляю стилі до елемента project__ellips
+const element = document.querySelector('.project__ellips');
+if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+    console.log('Клієнт використовує FireFox')
+    if (element) {
+        element.style.opacity = '0.5';
+    }
+}
