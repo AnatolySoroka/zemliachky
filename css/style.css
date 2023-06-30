@@ -3044,6 +3044,15 @@ position: relative;
   }
 }
 @media (max-width: 376px) {
+  .white__btn {
+    font-size: 14px;
+    line-height: 17px;
+    padding: 13px 18px;
+  }
+  .white__btn::before {
+    width: 45px;
+    height: 45px;
+  }
   .hero__offer-title {
     font-size: 30px;
     line-height: 36px;
@@ -3125,7 +3134,6 @@ position: relative;
   .partners__slider-item {
     margin: 0 15px;
   }
-
   .support-women__title {
     font-size: 26px;
     line-height: 32px;
@@ -3136,7 +3144,6 @@ position: relative;
   }
   .footer__copyright-wrapper {
     left: 16px;
-    /* right: 0; */
     bottom: 170px;
     text-align: start;
   }
@@ -3148,7 +3155,4 @@ position: relative;
   .accordion {
     padding-top: 73px;
   }
-  /* .goal__slider-item {
-    width: 100%;
-  } */
 }
