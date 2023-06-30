@@ -279,7 +279,7 @@ button {
 }
 
 .white__btn {
-position: relative;
+  position: relative;
   display: inline-block;
   font-weight: 600;
   font-size: 16px;
@@ -2797,11 +2797,11 @@ position: relative;
     font-size: 26px;
     line-height: 32px;
     margin-bottom: 35px;
-}
-.error__wrapper {
-  margin-top: 0px;
-  padding: 170px 50px 100px;
-}
+  }
+  .error__wrapper {
+    margin-top: 0px;
+    padding: 170px 50px 100px;
+  }
   .item__title-inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2981,9 +2981,9 @@ position: relative;
   .error__wrapper svg {
     max-width: 234px;
   }
-.error__wrapper {
-  padding: 100px 0px 100px;
-}
+  .error__wrapper {
+    padding: 100px 0px 100px;
+  }
   .hero-img__ellipse {
     top: 150px;
     font-size: 14px;
@@ -3052,6 +3052,9 @@ position: relative;
   .white__btn::before {
     width: 45px;
     height: 45px;
+  }
+  .error__wrapper {
+    padding: 75px 0px 75px;
   }
   .hero__offer-title {
     font-size: 30px;
