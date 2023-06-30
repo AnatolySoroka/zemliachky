@@ -147,6 +147,7 @@ body {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
+  background-color: #f6f6f6;
 }
 .footer {
   -webkit-box-flex: 0;
@@ -2459,6 +2460,9 @@ button {
 }
 
 /*ERROR 404*/
+.error {
+  background-color: #f6f6f6;
+}
 
 .error__wrapper {
   margin-top: 113px;
@@ -2478,6 +2482,10 @@ button {
 }
 
 /* PRIVACY SECTION */
+
+.privacy {
+  background-color: #f6f6f6;
+}
 
 .privacy__wrapper {
   padding: 283px 0 170px;
@@ -2500,9 +2508,93 @@ button {
   display: block;
 }
 
+/* ARTICLE SECTION */
+
+.article {
+  margin-top: 113px;
+  background-color: #f6f6f6;
+}
+
+.article__wrapper {
+  padding: 46px 0 170px;
+}
+
+.article__title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 49px;
+  margin: 30px 0 70px;
+}
+
+.article__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.article__content-title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 70px;
+}
+
+.article__content-left {
+  width: 48%;
+  position: relative;
+  top: 0px;
+}
+
+.article__content-right {
+  width: 48%;
+}
+
+.article__content-right p:not(:first-child) {
+  margin-top: 20px;
+  color: #000;
+}
+
+.article__content-right b {
+  margin-top: 20px;
+  display: block;
+}
+
+.article__content-right ul {
+  margin-top: 20px;
+  padding-inline-start: 22px;
+}
+
+.author {
+  margin-top: 90px;
+}
+
+address {
+  display: inline-block;
+  font-style: normal;
+  color: #A6A6A6;
+}
+
+address:first-child {
+  margin-right: 70px;
+}
+
+.article__content-img {
+  position: sticky;
+  top: 20px;
+  max-width: 700px;
+  padding-bottom: 100%;
+  border-radius: 30px;
+  background: var(--white, #fff) url("../images/article-img.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0px 0px 12px 5px rgba(136, 136, 136, 0.25);
+}
+
 /* ADAPTIVE */
 
 @media (max-width: 1190px) {
+  .article__wrapper {
+    padding: 100px 0 170px;
+}
   .header {
     transition: all 0.3s ease;
     max-height: 170px;
@@ -2989,6 +3081,23 @@ button {
     font-size: 30px;
     line-height: 36px;
   }
+  .article__content {
+    flex-direction: column;
+    gap: 40px;
+  }
+.article__content-left {
+  width: 100%;
+  position: relative;
+}
+.article__content-right {
+  width: 100%;
+}
+.article__content-img {
+  position: static;
+}
+.article__wrapper {
+  padding: 100px 0 100px;
+}
 }
 
 @media (max-width: 426px) {
@@ -3063,6 +3172,17 @@ button {
   .privacy__wrapper {
     padding: 170px 0 120px;
   }
+  .article {
+    margin-top: 0px;
+}
+.article__title {
+  font-size: 26px;
+  line-height: 32px;
+}
+.article__content-title {
+  font-size: 20px;
+  line-height: 24px;
+}
 }
 @media (max-width: 376px) {
   .white__btn {
