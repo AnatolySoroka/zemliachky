@@ -2618,8 +2618,8 @@ address:first-child {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .psychological-support__item {
@@ -2627,8 +2627,8 @@ address:first-child {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   gap: 100px;
   padding-bottom: 40px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -2666,6 +2666,30 @@ address:first-child {
   margin: 70px auto 0;
   display: block;
   font-weight: 600;
+}
+
+/* ABOUT HEROS */
+
+.about-heros {
+  padding: 113px 0 170px;
+}
+
+.about-heros__wrapper {
+  padding-top: 47px;
+}
+
+.about-heros__title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 49px;
+  margin: 30px 0 46px;
+}
+
+.about-heros__block {
+  width: 100%;
+  min-height: 710px;
+  border-radius: 30px;
+  background:   #a6a6a6;
 }
 
 /* ADAPTIVE */
@@ -2961,9 +2985,10 @@ address:first-child {
   .img-cross {
     margin-left: 298px;
   }
-  .psychological-support {
+  .psychological-support,
+  .about-heros {
     padding: 170px 0 170px;
-}
+  }
 }
 
 @media (max-width: 1025px) {
@@ -2980,7 +3005,7 @@ address:first-child {
   }
   .psychological-support__item {
     gap: 50px;
-}
+  }
 }
 
 @media (max-width: 769px) {
@@ -2990,13 +3015,13 @@ address:first-child {
   }
   .psychological-support__item img {
     max-width: 300px;
-}
-.psychological-support__item-title {
-  margin-bottom: 40px;
-}
+  }
+  .psychological-support__item-title {
+    margin-bottom: 40px;
+  }
   .psychological-support {
     padding: 170px 0 120px;
-}
+  }
   .error__wrapper svg {
     max-width: 334px;
   }
@@ -3202,20 +3227,23 @@ address:first-child {
 }
 
 @media (max-width: 426px) {
-  .psychological-support__title {
+  .psychological-support__title,
+  .about-heros__title {
     font-size: 26px;
-    line-height: 32px;margin: 30px 0 40px;
+    line-height: 32px;
+    margin: 30px 0 40px;
   }
   .psychological-support__item-title {
     font-size: 20px;
     line-height: 24px;
   }
-  .psychological-support {
+  .psychological-support,
+  .about-heros {
     padding: 73px 0 100px;
-}
+  }
   .psychological-support__item img {
     max-width: 100%;
-}
+  }
   .error__wrapper svg {
     max-width: 234px;
   }
