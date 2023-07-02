@@ -2689,7 +2689,36 @@ address:first-child {
   width: 100%;
   min-height: 710px;
   border-radius: 30px;
-  background:   #a6a6a6;
+  background: #a6a6a6;
+}
+
+/* FUTURE SECTION */
+
+.future__wrapper {
+  margin: 85px 0 170px;
+  min-height: 727px;
+  background: #fff;
+  box-shadow: 0px 0px 12px 5px rgba(136, 136, 136, 0.25);
+  background-image: url('../images/future-bg.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+}
+
+.future__title {
+  padding-top: 100px;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 49px;
+}
+
+.future__bottom-title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 49px;
+  text-align: center;
+  margin-bottom: 170px;
+  padding: 0 16px;
 }
 
 /* ADAPTIVE */
@@ -3069,9 +3098,15 @@ address:first-child {
     width: -moz-fit-content;
     width: fit-content;
   }
+  .future__wrapper {
+    min-height: 460px;
+  }
 }
 
 @media (max-width: 577px) {
+  .future__wrapper {
+    margin: 85px 0 120px;
+}
   .error__wrapper svg {
     max-width: 234px;
   }
@@ -3227,8 +3262,16 @@ address:first-child {
 }
 
 @media (max-width: 426px) {
+  .accordion__items {
+    padding: 45px 0 30px;
+}
+  .future__wrapper {
+    margin: 85px 0 80px;
+}
   .psychological-support__title,
-  .about-heros__title {
+  .about-heros__title,
+  .future__bottom-title,
+  .future__title {
     font-size: 26px;
     line-height: 32px;
     margin: 30px 0 40px;
