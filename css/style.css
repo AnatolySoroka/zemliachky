@@ -2750,14 +2750,24 @@ address:first-child {
   margin-top: 20px;
 }
 
-.smi-block {
+.smi__list {
   margin-top: 35px;
   display: flex;
   flex-wrap: wrap;
-  gap: 0 60px;
+  align-items: center;
+  gap: 48px 64px;
 }
 
-.smi-block img {
+.smi__list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.smi__list-item img {
+  display: block;
+  max-width: 100%;
   object-fit: contain;
 }
 
@@ -2840,7 +2850,6 @@ address:first-child {
 
 .reporting__item-title {
   margin: 20px 0;
-  max-width: 201px;
   min-height: 38px;
   text-transform: uppercase;
 }
