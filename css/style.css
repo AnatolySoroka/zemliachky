@@ -384,11 +384,11 @@ button {
   background-image: url("../images/circled-line.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 20px 0;
+  background-position: center center;
   width: 100%;
   height: 100%;
   top: 0px;
-  left: -3px;
+  left: 0px;
 }
 
 /* .hero__offer-btn::before {
@@ -560,7 +560,7 @@ button {
 .application__btn::before {
   position: absolute;
   content: "";
-  width: 63px;
+  width: 100%;
   height: 63px;
   border-radius: 50px;
   -webkit-border-radius: 50px;
@@ -578,9 +578,9 @@ button {
   -o-transition: all 0.6s ease;
 }
 
-.application__btn:hover::before {
+/* .application__btn:hover::before {
   width: 100%;
-}
+} */
 
 /* ABOUT SECTION */
 
@@ -595,6 +595,8 @@ button {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .about__info {
@@ -2976,9 +2978,9 @@ address:first-child {
   .about {
     padding: 70px 0;
   }
-  .about__inner {
+  /* .about__inner {
     display: block;
-  }
+  } */
   .about__title {
     font-size: 34px;
     line-height: 41px;
@@ -2993,9 +2995,9 @@ address:first-child {
     margin-top: 50px;
     margin-bottom: 45px;
   }
-  .about__slider {
+  /* .about__slider {
     max-width: 100%;
-  }
+  } */
   .ukrainian-heroes__slider {
     text-align: start;
   }
@@ -3182,6 +3184,10 @@ address:first-child {
   .psychological-support__item {
     gap: 50px;
   }
+  .about__slider {
+    max-width: 100%;
+    height: fit-content;
+}
 }
 
 @media (max-width: 769px) {
@@ -3251,6 +3257,9 @@ address:first-child {
 }
 
 @media (max-width: 577px) {
+  .hero-img__cat img {
+    max-width: 110px;
+}
   .future__wrapper {
     margin: 85px 0 120px;
   }
@@ -3409,6 +3418,9 @@ address:first-child {
 }
 
 @media (max-width: 426px) {
+  .hero-img__cat img {
+    max-width: 85px;
+}
   .accordion__items {
     padding: 45px 0 30px;
   }

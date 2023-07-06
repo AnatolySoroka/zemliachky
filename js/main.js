@@ -4,10 +4,10 @@
     lazyLoad: "ondemand",
     adaptiveHeight: true,
     slidesToShow: 1,
-    // autoplay: true,
+    autoplay: true,
     responsive: [
       {
-        breakpoint: 1190,
+        breakpoint: 1025,
         settings: {
             slidesToShow: 2,
           variableWidth: true,
