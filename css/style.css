@@ -681,42 +681,27 @@ button {
 }
 
 .about__slider {
+  max-width: 49%;
   height: fit-content;
-  min-width: 0;
-  width: 49%;
 }
 
 .about__slider-item {
-  position: relative;
   -webkit-box-shadow: 0px 0px 12px 5px rgba(136, 136, 136, 0.25);
   box-shadow: 0px 0px 12px 5px rgba(136, 136, 136, 0.25);
   border-radius: 30px;
-  width: 783px;
-  height: 784px;
-  margin: 0 20px;
   overflow: hidden;
+  margin: 0 20px;
 }
 
-.about__slider .slick-track {
-  padding: 15px 0;
+.about__slider-item img {
+  max-width: 100%;
 }
 
-.slider-item-img {
-  position: absolute;
-  top: 0;
-  /* bottom: 0; */
-  left: 0;
-  right: 0;
-  width: 100%;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-}
-
-.slider-item-img img {
-  /* object-fit: cover; */
-  width: 100%;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+.slider__item-info {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  padding: 30px 30px;
 }
 
 .about__slider .slick-arrow {
@@ -753,54 +738,6 @@ button {
   -o-transform: rotate(180deg) translateY(50%);
 }
 
-.slider__item-info {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  background-color: #fff;
-  min-height: 128px;
-}
-
-.info__name {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.info__social a {
-  position: relative;
-  padding-left: 48px;
-  color: rgba(0, 0, 0, 0.8);
-}
-
-.info__social a::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: -10px;
-  background-image: url("../images/instagram.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  width: 38px;
-  height: 38px;
-}
 
 /* UKRAININAN-HEROES SECTION */
 
@@ -1158,6 +1095,7 @@ button {
 /* INSTAGRAM SECTION */
 
 .instagram {
+  overflow: hidden;
   background-color: var(--silver);
   padding-bottom: 130px;
 }
@@ -3056,7 +2994,7 @@ address:first-child {
     margin-bottom: 45px;
   }
   .about__slider {
-    width: 100%;
+    max-width: 100%;
   }
   .ukrainian-heroes__slider {
     text-align: start;
@@ -3064,7 +3002,7 @@ address:first-child {
   .about__slider-item {
     overflow: hidden;
     width: 495px;
-    height: 600px;
+    /* height: 600px; */
   }
   .ukrainian-heroes__slider-item b,
   .ukrainian-heroes__slider-item p {
@@ -3380,7 +3318,7 @@ address:first-child {
   .about__slider-item {
     overflow: hidden;
     width: 265px;
-    height: 356px;
+    /* height: 356px; */
   }
   .slider__item-info {
     -webkit-box-orient: vertical;
