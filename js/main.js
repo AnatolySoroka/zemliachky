@@ -2,7 +2,8 @@ $(document).ready(function () {
     $(".about__slider").slick({
         arrows: true,
         lazyLoad: 'ondemand',
-        autoplay: true,
+        // adaptiveHeight: true,
+        // autoplay: true,
         responsive: [
             {
                 breakpoint: 1190,
@@ -164,17 +165,17 @@ burgerBtn.addEventListener('click', () => {
 
 
 
-// select language
-const language = document.querySelectorAll('.language');
-language.forEach(el => {
-    el.addEventListener('mouseover', () => {
-        el.querySelector('.select-language__list').classList.add('active');
-    });
-    el.addEventListener('mouseout', () => {
-        el.querySelector('.select-language__list').classList.remove('active')
-    });
+// // select language
+// const language = document.querySelectorAll('.language');
+// language.forEach(el => {
+//     el.addEventListener('mouseover', () => {
+//         el.querySelector('.select-language__list').classList.add('active');
+//     });
+//     el.addEventListener('mouseout', () => {
+//         el.querySelector('.select-language__list').classList.remove('active')
+//     });
 
-})
+// })
 
 
 // accordion
@@ -265,4 +266,23 @@ if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
     if (element) {
         element.style.opacity = '0.5';
     }
+}
+
+
+
+// Отримуємо всі елементи з класом "menu__list-link"
+const elements = document.getElementsByClassName('menu__list-link');
+
+// Перебираємо кожен елемент
+for (let i = 0; i < elements.length; i++) {
+    const element = elements[i];
+
+    // Отримуємо поточну ширину елементу
+    const currentWidth = element.offsetWidth;
+
+    // Додаємо 10px до поточної ширини
+    const newWidth = currentWidth + 60;
+
+    // Встановлюємо нову ширину для елементу
+    element.style.width = newWidth + 'px';
 }
